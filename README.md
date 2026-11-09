@@ -2,6 +2,10 @@
 
 Filmleri listeleyebildiğiniz, arayabildiğiniz, detaylarını görüntüleyebildiğiniz, yeni film ekleyip silebildiğiniz fullstack bir film uygulaması. Frontend **React** ile, backend ise herhangi bir framework kullanılmadan **saf Node.js** ile geliştirilmiştir.
 
+## 🎬 Demo
+
+![Uygulama Demosu](Screen.gif)
+
 ## 📖 Proje Hakkında
 
 Bu projenin amacı, Express gibi bir framework kullanmadan Node.js'in yerleşik `http` modülüyle bir REST API'nin nasıl yazıldığını öğrenmek ve bu API'yi modern bir React arayüzüyle kullanmaktır.
@@ -25,6 +29,7 @@ Bu projenin amacı, Express gibi bir framework kullanmadan Node.js'in yerleşik 
 ## 🛠️ Kullanılan Teknolojiler
 
 **Frontend**
+
 - [React 19](https://react.dev/)
 - [Vite](https://vite.dev/)
 - [Tailwind CSS v4](https://tailwindcss.com/)
@@ -35,6 +40,7 @@ Bu projenin amacı, Express gibi bir framework kullanmadan Node.js'in yerleşik 
 - [Lucide React](https://lucide.dev/)
 
 **Backend**
+
 - [Node.js](https://nodejs.org/) (`http`, `fs`, `crypto` modülleri)
 - [Nodemon](https://nodemon.io/)
 
@@ -69,38 +75,43 @@ fullstack-movie/
 ## 🚀 Kurulum ve Çalıştırma
 
 **1. Projeyi klonlayın**
+
 ```bash
 git clone <repo-url>
 cd fullstack-movie
 ```
 
 **2. Backend'i başlatın**
+
 ```bash
 cd backend
 npm install
 npm run dev
 ```
+
 API `http://localhost:5000` adresinde çalışır.
 
 > ⚠️ Backend'i mutlaka `backend/` klasörünün içinden başlatın. Veriler `./data/movies.json` göreli yoluyla okunduğu için başka bir klasörden çalıştırıldığında dosya bulunamaz.
 
 **3. Frontend'i başlatın** (yeni bir terminalde)
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
+
 Uygulama varsayılan olarak `http://localhost:5173` adresinde açılır.
 
 ## 🔌 API Endpoint'leri
 
-| Method   | URL            | Açıklama                      | Başarılı Yanıt |
-| -------- | -------------- | ----------------------------- | -------------- |
-| `GET`    | `/movies`      | Tüm filmleri getirir          | `200`          |
-| `GET`    | `/movies/:id`  | Belirtilen id'li filmi getirir | `200`          |
-| `POST`   | `/movies`      | Yeni film oluşturur           | `201`          |
-| `PUT`    | `/movies/:id`  | Belirtilen filmi günceller    | `200`          |
-| `DELETE` | `/movies/:id`  | Belirtilen filmi siler        | `204`          |
+| Method   | URL           | Açıklama                       | Başarılı Yanıt |
+| -------- | ------------- | ------------------------------ | -------------- |
+| `GET`    | `/movies`     | Tüm filmleri getirir           | `200`          |
+| `GET`    | `/movies/:id` | Belirtilen id'li filmi getirir | `200`          |
+| `POST`   | `/movies`     | Yeni film oluşturur            | `201`          |
+| `PUT`    | `/movies/:id` | Belirtilen filmi günceller     | `200`          |
+| `DELETE` | `/movies/:id` | Belirtilen filmi siler         | `204`          |
 
 `/movies` dışındaki adreslere veya bulunamayan id'lere yapılan istekler `404` döner.
 
